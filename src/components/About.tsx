@@ -9,10 +9,22 @@ const About = () => {
 
   const education = [
     {
-      degree: "B.Tech in Computer Science Engineering",
-      institution: "SRGEC",
+      degree: "B.Tech in Computer Science & Engineering",
+      institution: "Seshadri Rao Gudlavalleru Engineering College",
       cgpa: "8.9",
-      year: "2022-2026",
+      icon: "🎓",
+    },
+    {
+      degree: "Intermediate (MPC)",
+      institution: "NRI Junior College, Eluru",
+      cgpa: "9.3",
+      icon: "🏫",
+    },
+    {
+      degree: "SSC",
+      institution: "SMC EM High School, Eluru",
+      cgpa: "8.7",
+      icon: "🏫",
     },
   ];
 
@@ -72,29 +84,30 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5 }}
-          className="max-w-2xl"
+          className="max-w-3xl"
         >
-          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+          <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2">
             <GraduationCap className="text-primary" />
             Education
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="relative pl-8 pb-6 border-l-2 border-primary/30 last:pb-0 group hover:border-primary transition-colors"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.6 + index * 0.15 }}
+                className="relative pl-12 pb-6 border-l-2 border-primary/30 last:pb-0"
               >
-                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary -translate-x-[9px] group-hover:scale-125 transition-transform" />
-                <div className="space-y-1">
-                  <h4 className="font-semibold text-lg">{edu.degree}</h4>
-                  <p className="text-muted-foreground text-sm">{edu.institution}</p>
-                  <div className="flex gap-4 text-sm">
-                    <span className="text-primary font-semibold">CGPA: {edu.cgpa}</span>
-                    <span className="text-muted-foreground">{edu.year}</span>
-                  </div>
+                <div className="absolute left-0 top-6 w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm border-2 border-primary -translate-x-[17px] flex items-center justify-center text-lg">
+                  {edu.icon}
+                </div>
+                <div className="p-6 rounded-2xl bg-card border border-border hover:shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-all duration-300 hover:border-primary/50">
+                  <h4 className="font-semibold text-xl mb-2">{edu.degree}</h4>
+                  <p className="text-muted-foreground mb-3">{edu.institution}</p>
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                    CGPA: {edu.cgpa}
+                  </span>
                 </div>
               </motion.div>
             ))}
