@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import FloatingIcons from "./FloatingIcons";
 
 const Hero = () => {
@@ -71,9 +71,10 @@ const Hero = () => {
             onClick={scrollToProjects}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg glow-hover"
+            className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg glow-hover flex items-center gap-2"
           >
-            ✨ View My Work
+            <Download size={20} />
+            Resume
           </motion.button>
         </motion.div>
       </div>
