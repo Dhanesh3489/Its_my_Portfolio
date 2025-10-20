@@ -47,12 +47,7 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm Dhanesh, a passionate and self-driven Computer Science Engineering student from Eluru, 
-              Andhra Pradesh. I enjoy crafting smart, efficient, and beautiful digital solutions using AI, 
-              ML, and web technologies.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              My curiosity keeps me learning, building, and pushing creative boundaries.
+              Aspiring Software Engineer with strong foundations in Python, Java, and full-stack development. Passionate about AI, Machine Learning, and Web Technologies, I love building scalable, data-driven solutions that make an impact. I enjoy learning, experimenting, and creating intelligent software projects that solve real-world problems.
             </p>
             
             <div className="space-y-4 pt-4">
