@@ -30,10 +30,7 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold text-gradient">
-            Dhanesh
-          </a>
+        <div className="flex items-center justify-end w-full">
           <div className="hidden md:flex gap-8">
             {navItems.map((item) => (
               <a
