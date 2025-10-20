@@ -4,9 +4,6 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 import FloatingIcons from "./FloatingIcons";
 
 const Hero = () => {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -67,15 +64,16 @@ const Hero = () => {
               <Mail size={24} />
             </motion.a>
           </div>
-          <motion.button
-            onClick={scrollToProjects}
+          <motion.a
+            href="/GANGIREDDY_DHANESH_Resume.pdf"
+            download="GANGIREDDY_DHANESH_Resume.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg glow-hover flex items-center gap-2"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg glow-hover"
           >
             <Download size={20} />
             Resume
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>
