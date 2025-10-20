@@ -44,9 +44,10 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="space-y-6"
+            className="p-8 rounded-2xl bg-card border border-primary/30 glow space-y-6"
           >
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <h3 className="text-2xl font-semibold text-gradient mb-4">About Me</h3>
+            <p className="text-lg text-foreground leading-relaxed">
               Aspiring Software Engineer with strong foundations in Python, Java, and full-stack development. Passionate about AI, Machine Learning, and Web Technologies, I love building scalable, data-driven solutions that make an impact. I enjoy learning, experimenting, and creating intelligent software projects that solve real-world problems.
             </p>
             
@@ -80,7 +81,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6 + index * 0.1 }}
-                className="p-6 rounded-2xl bg-card border border-border glow-hover"
+                className="p-6 rounded-2xl bg-card/50 border border-border hover:border-primary/20 transition-colors"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">{edu.icon}</span>
