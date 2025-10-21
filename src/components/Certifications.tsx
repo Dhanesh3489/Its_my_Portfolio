@@ -57,6 +57,24 @@ const Certifications = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.6 }}
+          className="flex justify-center mt-12"
+        >
+          <motion.a
+            href="https://www.credly.com/users/gangireddy-dhanesh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary/10 border border-primary/30 text-primary font-semibold shadow-lg hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            🎓 View All Certificates
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
