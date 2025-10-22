@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { MapPin, Mail, Send } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
+import GameButton from "@/components/GameModal";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -131,6 +132,8 @@ const Contact = () => {
             </motion.button>
           </motion.form>
         </div>
+
+        <GameButton />
       </div>
     </section>
   );
