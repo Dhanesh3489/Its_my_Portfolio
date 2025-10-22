@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink } from "lucide-react";
+import GameButton from "@/components/GameModal";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -100,6 +101,8 @@ const Projects = () => {
             🔗 View All Projects
           </motion.a>
         </motion.div>
+
+        <GameButton />
       </div>
     </section>
   );
