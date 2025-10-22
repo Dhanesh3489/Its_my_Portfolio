@@ -22,22 +22,23 @@ export const GameButton = () => {
 
   return (
     <>
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 right-8 z-40 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold shadow-lg border-2 border-primary/50 hover:shadow-[0_0_20px_hsl(var(--primary)/0.6)] transition-all duration-300"
-        whileHover={{ scale: 1.05, rotate: 2 }}
-        whileTap={{ scale: 0.95 }}
-        animate={{
-          y: [0, -5, 0],
-        }}
-        transition={{
-          y: {
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-        }}
-      >
+      <motion.div className="flex justify-center py-12">
+        <motion.button
+          onClick={() => setIsOpen(true)}
+          className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold shadow-lg border-2 border-primary/50 hover:shadow-[0_0_20px_hsl(var(--primary)/0.6)] transition-all duration-300"
+          whileHover={{ scale: 1.05, rotate: 2 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
+        >
         <span className="flex items-center gap-2">
           <motion.span
             animate={{ rotate: [0, 15, -15, 0] }}
@@ -47,7 +48,8 @@ export const GameButton = () => {
           </motion.span>
           Take a Break – Play a Game!
         </span>
-      </motion.button>
+        </motion.button>
+      </motion.div>
 
       <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-4xl">
