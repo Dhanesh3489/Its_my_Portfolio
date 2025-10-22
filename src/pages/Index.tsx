@@ -7,6 +7,7 @@ import Internships from "@/components/Internships";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import GameButton from "@/components/GameModal";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <GameButton />
     </div>
   );
 };
