@@ -97,7 +97,7 @@ const Projects = () => {
             whileHover={{ scale: 1.05, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
           >
-            🔗 View All Projects on GitHub
+            🔗 View All Projects
           </motion.a>
         </motion.div>
       </div>
